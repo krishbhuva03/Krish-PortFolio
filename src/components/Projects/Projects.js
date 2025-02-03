@@ -2,12 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import word from "../../Assets/Projects/word-mindmaster Background Removed.png";
+import women from "../../Assets/Projects/women.png"
+import portfolio from "../../Assets/Projects/portfolio.jpeg"
 
 function Projects() {
   return (
@@ -23,70 +20,36 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={women}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="CycleEase"
+              description="CycleEase is a user-friendly period tracking app designed to simplify menstrual health management for women. It predicts upcoming cycles based on past data, ensuring accurate tracking and preparation. The app offers tailored wellness features, including personalized diet plans and health tips, addressing users' mood and pain levels during cycles. CycleEase emphasizes accessibility with its intuitive interface, making it easy to use for all age groups. Additionally, it provides detailed analytics, helping users understand their unique cycle patterns and make informed health decisions. By blending technology with care, CycleEase supports holistic well-being, empowering women to manage their menstrual health effectively."
+              ghLink="https://github.com/196170303023/CycleEase"
+            />
+          </Col>
+
+          <Col md={4} className="Personal | PortFolio">
+            <ProjectCard
+              imgPath={portfolio}
+              isBlog={false}
+              title="Personal | Portfolio"
+              description="I’ve developed a modern, responsive portfolio using React, JavaScript, HTML, and CSS to serve as a comprehensive platform for showcasing my professional journey. This portfolio highlights key aspects of my career, including my academic background, technical skills, major achievements, and the diverse projects I’ve worked on. Each section has been carefully designed to provide detailed insights, allowing visitors to understand my expertise and professional growth.
+
+              The portfolio features an intuitive, user-friendly interface with a clean design and smooth navigation, ensuring a seamless browsing experience. Visitors can explore my skills, view project details, and gain a clear understanding of how I approach problem-solving and development."
+              ghLink="https://github.com/196170303023/KrishPortFolio"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={word}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Word-Mastermind"
+              description="Word Mastermind is an engaging word-guessing game that challenges players to deduce a hidden target word. Players enter guesses, and the game provides immediate feedback for each letter: letters in the correct position are marked green, while correctly guessed but misplaced letters are highlighted in yellow. Unmatched letters remain unmarked, helping players refine their strategy as they progress. All guesses must be valid words, adding an element of linguistic skill and vocabulary knowledge. To enhance gameplay further, the on-screen keyboard dynamically updates, visually indicating letter statuses—present (green), absent (dark gray), or unknown (light gray), ensuring an interactive and intuitive experience."
+              ghLink="https://github.com/196170303023/Word-Mastermind"
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
         </Row>
       </Container>
     </Container>
