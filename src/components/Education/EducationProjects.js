@@ -25,7 +25,7 @@ function EducationProjects() {
                   <br />
                   Computer Science Engineering | 2022-2025
                   <br />
-                  CGPA: 7.36/10
+                  CGPA: 7.66
                 </>
               }
             />
@@ -40,7 +40,7 @@ function EducationProjects() {
                   <br />
                   Bio-Medical Engineering | 2019-2022
                   <br />
-                  CGPA: 7.89/10
+                  CGPA: 7.54
                 </>
               }
             />
@@ -48,14 +48,14 @@ function EducationProjects() {
 
           <Col md={4} className="education-card">
             <EducationCard
-              title="Secondary School Certificate"
+              title="Secondary School Examination"
               description={
                 <>
                   Kendriya Vidyalaya Air Station - Samana
                   <br />
                   CBSE | 2019
                   <br />
-                  Percentage: 61%
+                  Percentage: 62%
                 </>
               }
             />
@@ -106,19 +106,7 @@ function EducationProjects() {
           </Col>
           <Col md={4} className="education-card">
             <EducationCard
-              title="Courcsera"
-              description={
-                <>
-                  Python Basics and Advanced Concepts in a Comprehensive Python Course
-                  <br />
-                  July 2024 - Sept 2024
-                </>
-              }
-            />
-          </Col>
-          <Col md={4} className="education-card">
-            <EducationCard
-              title="Courcsera"
+              title="Coursera"
               description={
                 <>
                   JavaScript Programming Language In-depth With CSS

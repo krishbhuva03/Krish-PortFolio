@@ -8,30 +8,37 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Krish Bhuva </span>
-            from <span className="purple"> jamjodhpur, gujarat, India.</span>
+            ✨ Hi Everyone, I am <span className="purple">Krish Bhuva </span>
+            from  <span className="purple"> Jamnagar, Gujarat, India.</span>
             <br />
-            I'm currently pursuing my 7th semester of a Bachelor's degree in Computer Science at Parul University.
+            <br />
+             A creative problem solver who loves turning ideas into impactful digital experiences. From designing smooth user journeys to building projects that make life easier, I enjoy blending creativity, logic, and a touch of innovation.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Football
+              <ImPointRight /> Reading and listening to Philosophers 📖🎧
             </li>
             <li className="about-activity">
-              <ImPointRight /> Photography & Editing
+              <ImPointRight /> Geo Enthusiast 🌍
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+              <ImPointRight /> Playing Football ⚽️
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> Photography & Editing 📸
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> Travelling ⛰️
             </li>
           </ul>
 
+          <p>The quote I live by</p>          
           <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
-          </p>
-          <footer className="blockquote-footer">Krish</footer>
+            The world will ask you who you are, and if you do not know, the world will tell you.</p>
+          <footer className="blockquote-footer">Carl Jung</footer>
         </blockquote>
       </Card.Body>
     </Card>

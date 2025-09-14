@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
+import logo from "../../src/Assets/avatar.svg";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
@@ -16,6 +16,8 @@ import {
   AiBookOutline
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
+import { BsPersonWorkspace } from "react-icons/bs";
+
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -67,6 +69,16 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/work"
+                onClick={() => updateExpanded(false)}
+              >
+                <BsPersonWorkspace style={{ marginBottom: "2px" }} /> Work Experience
               </Nav.Link>
             </Nav.Item>
 

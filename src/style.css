@@ -776,6 +776,64 @@ button:focus {
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
 
+/* --------- */
+/* work */
+/* --------- */
+
+.work-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+}
+
+.work-card {
+  padding: 60px 40px !important; /* extra padding for spacious look */
+  width: 100% !important; /* full width of container */
+  max-width: 1200px !important; /* wider max width */
+  margin: 0 auto !important; /* center it */
+  height: auto !important;
+  font-size: 1.1rem !important; /* larger font for better readability */
+  line-height: 1.7 !important; /* more spacing between lines */
+}
+
+.work-card-view {
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  color: white !important;
+  background-color: transparent !important;
+  opacity: 0.9 !important;
+  transition: all 0.5s ease 0s !important;
+  height: 100% !important;
+  font-size: 1.05rem !important; /* slightly bigger inside content */
+}
+
+.work-card-view:hover {
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+}
+
+/* Headings inside work section */
+.work-section h1,
+.work-section h2,
+.work-section h3 {
+  font-size: 2.4rem !important; /* bigger headings */
+  font-weight: bold !important;
+}
+
+/* Paragraphs inside work section */
+.work-section p {
+  font-size: 1.2rem !important;
+  margin-bottom: 10px !important;
+}
+
+/* List items inside work section */
+.work-section li {
+  font-size: 1.1rem !important;
+  margin-bottom: 12px !important; /* more spacing between bullets */
+}
+
+
 .blog-card {
   padding-top: 50px !important;
   padding-bottom: 50px !important;

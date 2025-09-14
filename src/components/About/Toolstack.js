@@ -1,16 +1,22 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
-  SiVisualstudiocode,
   SiPostman,
+  SiLinux,
   SiDocker,
   SiEclipseche,
   SiApachenetbeanside,
   SiVercel,
   SiVmware,
   SiMacos,
-  SiAtom
+  SiIntellijidea,
+  SiInsomnia,
+  SiSelenium
 } from "react-icons/si";
+
+import { BiLogoVisualStudio } from "react-icons/bi";
+
+import { FaAws } from "react-icons/fa6";
 
 function Toolstack() {
   return (
@@ -19,10 +25,16 @@ function Toolstack() {
         <SiMacos />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
+        <SiLinux />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiAtom />
+        <FaAws />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <BiLogoVisualStudio />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiIntellijidea />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiEclipseche />
@@ -31,7 +43,13 @@ function Toolstack() {
         <SiApachenetbeanside />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <SiSelenium />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <SiPostman />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiInsomnia />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiDocker />

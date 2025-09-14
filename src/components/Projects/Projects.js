@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import word from "../../Assets/Projects/word-mindmaster Background Removed.png";
 import women from "../../Assets/Projects/women.png"
+import airbnb from "../../Assets/Projects/airbnb.png"
 import portfolio from "../../Assets/Projects/portfolio.jpeg"
 
 function Projects() {
@@ -18,6 +19,17 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={airbnb}
+              isBlog={false}
+              title="Air BnB Clone"
+              description="I built an Airbnb clone web application where users can register, browse properties, filter by location, price, and amenities, and securely book rentals. Hosts can add and manage listings with details such as images, availability, and pricing. The project was developed using Java with Spring Boot and Hibernate for backend services and PostgreSQL for data storage, while authentication was managed using Spring Security with JWT. On the frontend, I used JSP/Thymeleaf for dynamic rendering and ensured a responsive UI. I also implemented real-time availability checks, validation layers, and RESTful APIs for seamless client–server communication. This project enhanced my expertise in Java-based full-stack development, focusing on API integration, database design, and building scalable, user-friendly applications."
+              ghLink="https://air-bnnb-jet.vercel.app/"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={women}
@@ -28,7 +40,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="Personal | PortFolio">
+          <Col md={4} className="project-card">
             <ProjectCard
               imgPath={portfolio}
               isBlog={false}
@@ -39,6 +51,7 @@ function Projects() {
               ghLink="https://github.com/196170303023/KrishPortFolio"
             />
           </Col>
+
 
           <Col md={4} className="project-card">
             <ProjectCard

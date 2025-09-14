@@ -24,7 +24,7 @@ function Home2() {
               <br />
               <br />I am fluent in classics like
               <i>
-                <b className="purple"> Javascript and JAVA. </b>
+                <b className="purple"> Java and Javascript. </b>
               </i>
               <br />
               <br />
@@ -39,7 +39,7 @@ function Home2() {
               <br />
               <br />
               Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
+              with <b className="purple"> <i>Spring | SpringBoot | Hibernate</i></b> and
               <i>
                 <b className="purple">
                   {" "}
@@ -67,7 +67,7 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://github.com/196170303023"
+                  href="https://github.com/krishbhuva03"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
@@ -87,7 +87,7 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/krish-bhuva-3a96a223b/"
+                  href="https://www.linkedin.com/in/krish-bhuva/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
