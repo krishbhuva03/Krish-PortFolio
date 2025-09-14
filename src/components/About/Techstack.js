@@ -12,9 +12,7 @@ import {
   DiJqueryLogo,
   DiGit,
   DiGithub,
-  DiJava,
-  Di
-  
+  DiJava
 } from "react-icons/di";
 import {
   SiRedis,
@@ -27,8 +25,6 @@ import {
   SiBun,
   SiAngularjs,
   SiXstate,
-  
-
 } from "react-icons/si";
 import { TbBrandGolang } from "react-icons/tb";
 
@@ -73,9 +69,6 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiGithub />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiExcalidraw />
       </Col>
     </Row>
   );
