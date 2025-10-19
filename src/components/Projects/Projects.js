@@ -59,7 +59,7 @@ function Projects() {
               isBlog={false}
               title="Word-Mastermind"
               description="Word Mastermind is an engaging word-guessing game that challenges players to deduce a hidden target word. Players enter guesses, and the game provides immediate feedback for each letter: letters in the correct position are marked green, while correctly guessed but misplaced letters are highlighted in yellow. Unmatched letters remain unmarked, helping players refine their strategy as they progress. All guesses must be valid words, adding an element of linguistic skill and vocabulary knowledge. To enhance gameplay further, the on-screen keyboard dynamically updates, visually indicating letter statuses—present (green), absent (dark gray), or unknown (light gray), ensuring an interactive and intuitive experience."
-              ghLink="https://github.com/196170303023/Word-Mastermind"
+              ghLink="https://quinword.vercel.app/"
             />
           </Col>
 
