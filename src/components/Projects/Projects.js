@@ -3,9 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import word from "../../Assets/Projects/word-mindmaster Background Removed.png";
-import women from "../../Assets/Projects/women.png"
-import airbnb from "../../Assets/Projects/airbnb.png"
-import portfolio from "../../Assets/Projects/portfolio.jpeg"
+import airbnb from "../../Assets/Projects/airbnb.png";
+import portfolio from "../../Assets/Projects/portfolio.jpeg";
 
 function Projects() {
   return (
@@ -32,7 +31,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={women}
+              imgPath={portfolio}
               isBlog={false}
               title="CycleEase"
               description="CycleEase is a user-friendly period tracking app designed to simplify menstrual health management for women. It predicts upcoming cycles based on past data, ensuring accurate tracking and preparation. The app offers tailored wellness features, including personalized diet plans and health tips, addressing users' mood and pain levels during cycles. CycleEase emphasizes accessibility with its intuitive interface, making it easy to use for all age groups. Additionally, it provides detailed analytics, helping users understand their unique cycle patterns and make informed health decisions. By blending technology with care, CycleEase supports holistic well-being, empowering women to manage their menstrual health effectively."
