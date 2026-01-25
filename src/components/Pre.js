@@ -71,18 +71,17 @@ const generateHangingIcons = (count) => {
   return icons;
 };
 
-// Animated Thread Component
-const AnimatedThread = ({ length, waveType, uniqueId, speed }) => {
-  const [offset, setOffset] = useState(0);
+// Animated Thread Component - Realistic physics
+const AnimatedThread = ({ length, waveType, uniqueId, speed, delay = 0 }) => {
+  const [elapsed, setElapsed] = useState(0);
   const animationRef = useRef();
+  const startTimeRef = useRef(null);
 
   useEffect(() => {
-    let startTime = null;
-    
     const animate = (timestamp) => {
-      if (!startTime) startTime = timestamp;
-      const elapsed = (timestamp - startTime) / 1000;
-      setOffset(elapsed);
+      if (!startTimeRef.current) startTimeRef.current = timestamp;
+      const elapsed = (timestamp - startTimeRef.current) / 1000;
+      setElapsed(elapsed);
       animationRef.current = requestAnimationFrame(animate);
     };
     
@@ -95,41 +94,48 @@ const AnimatedThread = ({ length, waveType, uniqueId, speed }) => {
     };
   }, []);
 
-  // Generate path based on wave type and current offset
+  // Generate path with realistic physics
   const generatePath = () => {
     const width = 60;
     const midX = width / 2;
-    const time = offset / speed;
-    const amplitude = 25;
     
-    switch (waveType) {
-      case 'U': {
-        // Single curve bending left/right
-        const bend = Math.sin(time * Math.PI * 2) * amplitude;
-        return `M ${midX} 0 Q ${midX + bend} ${length * 0.5} ${midX} ${length}`;
-      }
-      case 'W': {
-        // Double curve - W shape
-        const bend1 = Math.sin(time * Math.PI * 2) * amplitude;
-        const bend2 = Math.sin(time * Math.PI * 2 + Math.PI) * amplitude;
-        return `M ${midX} 0 Q ${midX + bend1} ${length * 0.33} ${midX} ${length * 0.5} Q ${midX + bend2} ${length * 0.67} ${midX} ${length}`;
-      }
-      case 'M': {
-        // Triple curve - M shape
-        const bend1 = Math.sin(time * Math.PI * 2) * amplitude;
-        const bend2 = Math.sin(time * Math.PI * 2 + Math.PI * 0.66) * amplitude;
-        const bend3 = Math.sin(time * Math.PI * 2 + Math.PI * 1.33) * amplitude;
-        return `M ${midX} 0 Q ${midX + bend1} ${length * 0.25} ${midX} ${length * 0.33} Q ${midX + bend2} ${length * 0.5} ${midX} ${length * 0.67} Q ${midX + bend3} ${length * 0.83} ${midX} ${length}`;
-      }
-      case 'S': {
-        // S-curve snake
-        const bend1 = Math.sin(time * Math.PI * 2) * amplitude;
-        const bend2 = -Math.sin(time * Math.PI * 2) * amplitude;
-        return `M ${midX} 0 C ${midX + bend1} ${length * 0.33} ${midX + bend2} ${length * 0.67} ${midX} ${length}`;
-      }
-      default:
-        return `M ${midX} 0 L ${midX} ${length}`;
+    // Time since this icon started falling (accounting for delay)
+    const timeSinceDrop = Math.max(0, elapsed - delay);
+    
+    // Drop animation takes about 1.8s * 0.3 = 0.54s to reach bottom
+    const dropTime = 0.54;
+    
+    // If still falling, thread is mostly straight (slight air resistance curve)
+    if (timeSinceDrop < dropTime) {
+      const fallProgress = timeSinceDrop / dropTime;
+      // Very slight curve during fall (air resistance)
+      const airCurve = Math.sin(fallProgress * Math.PI) * 3;
+      return `M ${midX} 0 Q ${midX + airCurve} ${length * 0.5} ${midX} ${length}`;
     }
+    
+    // After landing - damped oscillation (wiggles that fade out)
+    const timeSinceImpact = timeSinceDrop - dropTime;
+    
+    // Damping factor - oscillation dies down over time
+    const damping = Math.exp(-timeSinceImpact * 0.8);
+    
+    // Initial amplitude on impact, decreases with damping
+    const maxAmplitude = 15;
+    const amplitude = maxAmplitude * damping;
+    
+    // Oscillation frequency (faster initially, slows down)
+    const frequency = 4 + timeSinceImpact * 0.5;
+    
+    // Only wiggle if amplitude is significant
+    if (amplitude < 0.5) {
+      return `M ${midX} 0 L ${midX} ${length}`;
+    }
+    
+    // Create natural wave based on impact
+    const wave1 = Math.sin(timeSinceImpact * frequency * Math.PI * 2) * amplitude;
+    const wave2 = Math.sin(timeSinceImpact * frequency * Math.PI * 2 + Math.PI * 0.7) * amplitude * 0.6;
+    
+    return `M ${midX} 0 Q ${midX + wave1} ${length * 0.4} ${midX + wave2} ${length * 0.7} Q ${midX - wave1 * 0.3} ${length * 0.9} ${midX} ${length}`;
   };
 
   return (
@@ -235,6 +241,7 @@ function Pre({ load }) {
                 waveType={icon.waveType}
                 uniqueId={icon.id}
                 speed={icon.speed}
+                delay={icon.delay}
               />
             </div>
             {/* The Icon */}

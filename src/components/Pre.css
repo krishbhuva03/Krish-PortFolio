@@ -194,29 +194,40 @@
   margin-top: -5px;
 }
 
-/* Drop down with elastic bounce */
+/* Drop down with realistic yo-yo elastic bounce */
 @keyframes dropDown {
   0% {
     transform: translateY(-100%);
   }
-  45% {
+  /* Fast fall */
+  30% {
     transform: translateY(0%);
   }
-  55% {
-    transform: translateY(-15%);
+  /* Overshoot - thread stretches beyond normal length */
+  40% {
+    transform: translateY(15%);
   }
-  65% {
-    transform: translateY(0%);
+  /* Snap back up - elastic recoil */
+  50% {
+    transform: translateY(-25%);
   }
-  75% {
-    transform: translateY(-8%);
+  /* Fall again */
+  60% {
+    transform: translateY(8%);
   }
-  85% {
-    transform: translateY(0%);
+  /* Bounce up smaller */
+  70% {
+    transform: translateY(-12%);
   }
-  92% {
-    transform: translateY(-3%);
+  /* Small overshoot */
+  80% {
+    transform: translateY(4%);
   }
+  /* Tiny bounce */
+  90% {
+    transform: translateY(-5%);
+  }
+  /* Settle */
   100% {
     transform: translateY(0%);
   }
