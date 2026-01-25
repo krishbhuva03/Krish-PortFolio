@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Pre.css";
+import { WavyBackground } from "./ui/wavy-background";
 import { 
   DiReact, 
   DiNodejsSmall, 
@@ -174,15 +175,15 @@ function Pre({ load }) {
 
     const phase1Timer = setTimeout(() => {
       setAnimationPhase("revealing");
-    }, 300);
+    }, 500);
 
     const phase2Timer = setTimeout(() => {
       setAnimationPhase("glowing");
-    }, 2000);
+    }, 3000);
 
     const phase3Timer = setTimeout(() => {
       setAnimationPhase("exit");
-    }, 3500);
+    }, 5500);
 
     return () => {
       clearTimeout(phase1Timer);
@@ -200,6 +201,16 @@ function Pre({ load }) {
       className={`preloader-container ${animationPhase === "exit" ? "fade-out" : ""}`}
       id={load ? "preloader" : "preloader-none"}
     >
+      {/* Wavy Background */}
+      <WavyBackground
+        colors={["#38bdf8", "#818cf8", "#c084fc", "#e879f9", "#22d3ee"]}
+        waveWidth={50}
+        backgroundFill="#000000"
+        blur={10}
+        speed="slow"
+        waveOpacity={0.5}
+      />
+      
       {/* Hanging Tech Icons with Animated Curved Threads */}
       <div className="hanging-icons-container">
         {hangingIcons.map((icon) => (
