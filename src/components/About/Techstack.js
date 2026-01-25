@@ -32,6 +32,7 @@ import {
   SiPostgresql,
   SiDeno,
   SiBun,
+  SiSocketdotio,
 } from "react-icons/si";
 
 function Techstack() {
@@ -87,6 +88,9 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiGithub />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiSocketdotio />
       </Col>
     </Row>
   );
