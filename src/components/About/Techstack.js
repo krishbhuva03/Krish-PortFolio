@@ -17,21 +17,12 @@ import {
 
 import { TbApi } from "react-icons/tb";
 
-import { 
+import {
   SiSpring, 
   SiGraphql,
   SiHibernate,
-  SiIntellijidea,
-} from "react-icons/si";
-
-import {
-  SiRedis,
   SiFirebase,
-  SiNextdotjs,
-  SiSolidity,
   SiPostgresql,
-  SiDeno,
-  SiBun,
   SiSocketdotio,
 } from "react-icons/si";
 
