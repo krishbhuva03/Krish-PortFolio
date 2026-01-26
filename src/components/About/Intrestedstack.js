@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 
-import { FaBrain } from "react-icons/fa";
 import { LuBrainCircuit } from "react-icons/lu";
 import { MdOutlineNoEncryption } from "react-icons/md";
 import { SiKalilinux } from "react-icons/si";

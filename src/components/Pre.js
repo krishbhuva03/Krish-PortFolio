@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Pre.css";
-import { WavyBackground } from "./ui/wavy-background";
 import { 
   DiReact, 
   DiNodejsSmall, 
@@ -207,16 +206,6 @@ function Pre({ load }) {
       className={`preloader-container ${animationPhase === "exit" ? "fade-out" : ""}`}
       id={load ? "preloader" : "preloader-none"}
     >
-      {/* Wavy Background */}
-      <WavyBackground
-        colors={["#38bdf8", "#818cf8", "#c084fc", "#e879f9", "#22d3ee"]}
-        waveWidth={50}
-        backgroundFill="#000000"
-        blur={10}
-        speed="slow"
-        waveOpacity={0.5}
-      />
-      
       {/* Hanging Tech Icons with Animated Curved Threads */}
       <div className="hanging-icons-container">
         {hangingIcons.map((icon) => (
