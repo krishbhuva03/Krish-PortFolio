@@ -8,7 +8,13 @@ function WorkCards(props) {
   return (
     <Card className="work-card-view">
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+          <Card.Title>{props.title}</Card.Title>
+          <div style={{ textAlign: "right" }}>
+            <h5 style={{ fontSize: "1.1em", fontWeight: "bold", color: "white" }}>{props.date}</h5>
+            <p style={{ fontSize: "0.9em", color: "white" }}>{props.city}</p>
+          </div>
+        </div>
         <Card.Text style={{ textAlign: "left" }}>
           {props.description}
         </Card.Text>

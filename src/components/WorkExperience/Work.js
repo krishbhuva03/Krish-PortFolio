@@ -16,17 +16,34 @@ function Work() {
         </p>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          {/* Cognizant */}
+          <Col md={8} style={{ maxWidth: "800px" }} className="work-card">
+            <WorkCards
+              title={
+                <>Programmer Analyst Trainee at <strong className="purple">Cognizant</strong></>
+              }
+              date="05 Feb 2026 - Present"
+              city="Siruseri, Chennai, Tamil Nadu"
+              description={
+                <>
+                  <p style={{ marginBottom: "8px", fontStyle: "italic" }}>
+                    Currently working...
+                  </p>
+                </>
+              }
+            />
+          </Col>
+
           {/* Automation Edge */}
           <Col md={8} style={{ maxWidth: "800px" }} className="work-card">
             <WorkCards
               title={
                 <>Intern at <strong className="purple">Automation Edge</strong></>
               }
+              date=" 21 May 2025 - 01 Nov 2025"
+              city="Baner, Pune, Maharashtra"
               description={
                 <>
-                  <p style={{ marginBottom: "8px" }}>
-                    Baner, Pune, Maharashtra
-                  </p>
                   <ul style={{ paddingLeft: "20px", margin: 0 }}>
                     <li style={{ marginBottom: "6px" }}>
                       Worked extensively with <strong className="purple">PostgreSQL</strong> 
@@ -62,11 +79,10 @@ function Work() {
               title={
                 <>MERN Stack Developer at <strong className="purple">Digital Raise</strong></>
               }
+              date="01 Jan 2025 - 01 Apr 2025"
+              city="Vadodara, Gujarat"
               description={
                 <>
-                  <p style={{ marginBottom: "8px" }}>
-                    Vadodara, Gujarat
-                  </p>
                   <ul style={{ paddingLeft: "20px", margin: 0 }}>
                     <li style={{ marginBottom: "6px" }}>
                       Built and optimized responsive web applications using the 
