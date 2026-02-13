@@ -44,7 +44,7 @@ function Projects() {
               imgPath={portfolio}
               isBlog={false}
               title="Personal | Portfolio"
-              description="I’ve developed a modern, responsive portfolio using React, JavaScript, HTML, and CSS to serve as a comprehensive platform for showcasing my professional journey. This portfolio highlights key aspects of my career, including my academic background, technical skills, major achievements, and the diverse projects I’ve worked on. Each section has been carefully designed to provide detailed insights, allowing visitors to understand my expertise and professional growth.
+              description="I've developed a modern, responsive portfolio using React, JavaScript, HTML, and CSS to serve as a comprehensive platform for showcasing my professional journey. This portfolio highlights key aspects of my career, including my academic background, technical skills, major achievements, and the diverse projects I've worked on. Each section has been carefully designed to provide detailed insights, allowing visitors to understand my expertise and professional growth.
 
               The portfolio features an intuitive, user-friendly interface with a clean design and smooth navigation, ensuring a seamless browsing experience. Visitors can explore my skills, view project details, and gain a clear understanding of how I approach problem-solving and development."
               ghLink="https://github.com/196170303023/KrishPortFolio"

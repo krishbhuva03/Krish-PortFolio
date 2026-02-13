@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import WorkCards from "./WorkExperianceCard";
 import Particle from "../Particle";
+import { Highlighter } from "../ui/highlighter";
 
 function Work() {
   return (
@@ -12,7 +13,7 @@ function Work() {
           Work <strong className="purple">Experience</strong>
         </h1>
         <p style={{ color: "white" }}>
-          Exploring my corporate journey through the work I’ve accomplished.
+          Exploring my corporate journey through the work I've accomplished.
         </p>
 
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
@@ -46,26 +47,39 @@ function Work() {
                 <>
                   <ul style={{ paddingLeft: "20px", margin: 0 }}>
                     <li style={{ marginBottom: "6px" }}>
-                      Worked extensively with <strong className="purple">PostgreSQL</strong> 
+                      Worked extensively with{" "}
+                      <Highlighter action="highlight" color="#336791">
+                        PostgreSQL
+                      </Highlighter>{" "}
                       for data storage, querying, and optimization.
                     </li>
                     <li style={{ marginBottom: "6px" }}>
-                      Developed and maintained <strong className="purple">Java interfaces</strong> 
+                      Developed and maintained{" "}
+                      <Highlighter action="underline" color="#f89820">
+                        Java interfaces
+                      </Highlighter>{" "}
                       and data structures to handle complex business logic.
                     </li>
                     <li style={{ marginBottom: "6px" }}>
-                      Processed and managed data retrieved from 
-                      <strong className="purple"> REST API integrations</strong> 
+                      Processed and managed data retrieved from{" "}
+                      <Highlighter action="highlight" color="#87CEFA">
+                        REST API integrations
+                      </Highlighter>{" "}
                       for seamless backend workflows.
                     </li>
                     <li style={{ marginBottom: "6px" }}>
-                      Implemented <strong className="purple">Java-based solutions</strong> 
+                      Implemented{" "}
+                      <Highlighter action="underline" color="#f89820">
+                        Java-based solutions
+                      </Highlighter>{" "}
                       to transform and utilize API response data efficiently.
                     </li>
                     <li>
-                      Ensured clean, maintainable, and scalable code while working across 
-                      <strong className="purple"> Java</strong> and 
-                      <strong className="purple"> database-driven systems</strong>.
+                      Ensured clean, maintainable, and scalable code while working across{" "}
+                      <Highlighter action="highlight" color="#FF9800">
+                        Java and database-driven systems
+                      </Highlighter>
+                      .
                     </li>
                   </ul>
                 </>
@@ -85,33 +99,53 @@ function Work() {
                 <>
                   <ul style={{ paddingLeft: "20px", margin: 0 }}>
                     <li style={{ marginBottom: "6px" }}>
-                      Built and optimized responsive web applications using the 
-                      <strong className="purple"> MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>.
+                      Built and optimized responsive web applications using the{" "}
+                      <Highlighter action="highlight" color="#00D084">
+                        MERN Stack (MongoDB, Express.js, React.js, Node.js)
+                      </Highlighter>
+                      .
                     </li>
                     <li style={{ marginBottom: "6px" }}>
-                      Developed and integrated <strong className="purple">RESTful APIs</strong> 
+                      Developed and integrated{" "}
+                      <Highlighter action="underline" color="#87CEFA">
+                        RESTful APIs
+                      </Highlighter>{" "}
                       to enable seamless communication between frontend and backend systems.
                     </li>
                     <li style={{ marginBottom: "6px" }}>
-                      Worked with <strong className="purple">MongoDB</strong> 
+                      Worked with{" "}
+                      <Highlighter action="highlight" color="#4DB33D">
+                        MongoDB
+                      </Highlighter>{" "}
                       for efficient data modeling, querying, and management of dynamic datasets.
                     </li>
                     <li style={{ marginBottom: "6px" }}>
-                      Implemented reusable <strong className="purple">React.js components</strong> 
+                      Implemented reusable{" "}
+                      <Highlighter action="underline" color="#61DAFB">
+                        React.js components
+                      </Highlighter>{" "}
                       to ensure scalability and maintainability of the application.
                     </li>
                     <li style={{ marginBottom: "6px" }}>
-                      Enhanced <strong className="purple">application performance</strong> 
+                      Enhanced{" "}
+                      <Highlighter action="highlight" color="#FF6B9D">
+                        application performance
+                      </Highlighter>{" "}
                       through code optimization, state management, and API response handling.
                     </li>
                     <li style={{ marginBottom: "6px" }}>
-                      Collaborated with the team to <strong className="purple">debug, test, and deploy</strong> 
+                      Collaborated with the team to{" "}
+                      <Highlighter action="underline" color="#9D50BB">
+                        debug, test, and deploy
+                      </Highlighter>{" "}
                       features, ensuring smooth project delivery.
                     </li>
                     <li>
-                      Gained hands-on experience in 
-                      <strong className="purple"> end-to-end web application development</strong>, 
-                      from database design to frontend deployment.
+                      Gained hands-on experience in{" "}
+                      <Highlighter action="highlight" color="#87CEFA">
+                        end-to-end web application development
+                      </Highlighter>
+                      , from database design to frontend deployment.
                     </li>
                   </ul>
                 </>

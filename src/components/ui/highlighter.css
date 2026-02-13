@@ -1,0 +1,56 @@
+/* Highlighter Animation Styles */
+
+/* Hidden state - before animation */
+.highlighter-bg-hidden {
+  clip-path: inset(0 100% 0 0);
+}
+
+/* Animated state - draws from left to right */
+.highlighter-bg-animate {
+  animation: highlightDraw 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes highlightDraw {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0% 0 0);
+  }
+}
+
+/* Underline hidden state */
+.highlighter-underline-hidden {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+/* Underline animated state - draws the path */
+.highlighter-underline-animate {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: underlineDraw 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes underlineDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Optional: Add a slight delay for staggered effect if multiple highlights appear */
+.highlighter-bg-animate:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.highlighter-bg-animate:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+.highlighter-underline-animate:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.highlighter-underline-animate:nth-of-type(3) {
+  animation-delay: 0.2s;
+}

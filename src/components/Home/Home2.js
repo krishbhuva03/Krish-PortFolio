@@ -8,7 +8,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import EncryptionText from "./EncryptionText";
+import { Highlighter } from "../ui/highlighter";
 
 function Home2() {
   return (
@@ -20,85 +20,46 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              <EncryptionText 
-                text="I fell in love with programming and I have at least learnt something, I think… 🤷‍♂️" 
-                speed={30}
-              />
+              I fell in love with programming and I have at least learnt something, I think… 🤷‍♂️
               <br />
               <br />
-              <EncryptionText 
-                text="I am fluent in classics like " 
-                speed={30}
-              />
+              I am fluent in classics like{" "}
               <i>
-                <b className="purple">
-                  <EncryptionText 
-                    text="Java and Javascript." 
-                    speed={30}
-                  />
-                </b>
+                <Highlighter action="underline" color="#FF9800">
+                  Java and Javascript.
+                </Highlighter>
               </i>
               <br />
               <br />
-              <EncryptionText 
-                text="My field of Interest's are building new " 
-                speed={30}
-              />
+              My field of Interest's are building new{" "}
               <i>
-                <b className="purple">
-                  <EncryptionText 
-                    text="Web Technologies and Products" 
-                    speed={30}
-                  />
-                </b>
-                <EncryptionText 
-                  text=" and also in areas related to " 
-                  speed={30}
-                />
-                <b className="purple">
-                  <EncryptionText 
-                    text="Machine Learning." 
-                    speed={30}
-                  />
-                </b>
+                <Highlighter action="highlight" color="#4A9EFF">
+                  Web Technologies and Products
+                </Highlighter>
+                {" "}and also in areas related to{" "}
+                <Highlighter action="highlight" color="#FF4081">
+                  Machine Learning.
+                </Highlighter>
               </i>
               <br />
               <br />
-              <EncryptionText 
-                text="Whenever possible, I also apply my passion for developing products with " 
-                speed={30}
-              />
-              <b className="purple">
-                <i>
-                  <EncryptionText 
-                    text="Spring | SpringBoot | Hibernate" 
-                    speed={30}
-                  />
-                </i>
-              </b>
-              <EncryptionText 
-                text=" and " 
-                speed={30}
-              />
+              Whenever possible, I also apply my passion for developing products with{" "}
               <i>
-                <b className="purple">
-                  <EncryptionText 
-                    text="Modern Javascript Library and Frameworks" 
-                    speed={30}
-                  />
-                </b>
+                <Highlighter action="underline" color="#9D50BB">
+                  Spring | SpringBoot | Hibernate
+                </Highlighter>
               </i>
-              <EncryptionText 
-                text=" like " 
-                speed={30}
-              />
+              {" "}and{" "}
               <i>
-                <b className="purple">
-                  <EncryptionText 
-                    text="React.js" 
-                    speed={30}
-                  />
-                </b>
+                <Highlighter action="highlight" color="#87CEFA">
+                  Modern Javascript Library and Frameworks
+                </Highlighter>
+              </i>
+              {" "}like{" "}
+              <i>
+                <Highlighter action="underline" color="#00BCD4">
+                  React.js
+                </Highlighter>
               </i>
             </p>
           </Col>
