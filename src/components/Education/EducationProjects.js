@@ -65,7 +65,7 @@ function EducationProjects() {
           Courses And <strong className="purple">Certifications </strong>
       </h1>
       <p style={{ color: "white" }}>
-      Here is an overview of the courses and certifications I’ve completed throughout my B.Tech to enhance my technical skills and expertise.
+      Here is an overview of the courses and certifications I've completed throughout my B.Tech to enhance my technical skills and expertise.
       </p>
 
           <Col md={4} className="education-card">

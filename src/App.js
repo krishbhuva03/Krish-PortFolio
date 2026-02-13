@@ -8,6 +8,8 @@ import Education from "./components/Education/EducationProjects";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
+import { SmoothCursor } from "./components/ui/smooth-cursor";
+import { ScrollProgress } from "./components/ui/scroll-progress";
 import {
   BrowserRouter as Router,
   Route,
@@ -32,6 +34,8 @@ function App() {
 
   return (
     <Router>
+      <SmoothCursor />
+      <ScrollProgress />
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />

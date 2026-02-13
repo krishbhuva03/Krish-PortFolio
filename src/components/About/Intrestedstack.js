@@ -1,18 +1,19 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-
-import { LuBrainCircuit } from "react-icons/lu";
-import { MdOutlineNoEncryption } from "react-icons/md";
-import { SiKalilinux } from "react-icons/si";
+import {
+  SiKalilinux
+} from "react-icons/si";
+import { MdSecurity } from "react-icons/md";
+import { GiBrain } from "react-icons/gi";
 
 function Intrestedstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <LuBrainCircuit />
+        <GiBrain />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <MdOutlineNoEncryption />
+        <MdSecurity />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiKalilinux />

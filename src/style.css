@@ -14,6 +14,20 @@ html {
   --imp-text-color: #c770f0;
 }
 
+/* --------- */
+/* Smooth Cursor - Hide default cursor */
+/* --------- */
+* {
+  cursor: none !important;
+}
+
+/* Keep text cursor for input fields for better UX */
+input,
+textarea,
+select {
+  cursor: text !important;
+}
+
 .purple {
   color: var(--imp-text-color) !important;
 }
