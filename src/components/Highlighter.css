@@ -1,0 +1,57 @@
+.highlighter {
+  position: relative;
+  display: inline-block;
+  padding: 0.1em 0.2em;
+  transition: all 0.3s ease;
+}
+
+/* Highlight background */
+.highlighter-highlight {
+  background: var(--highlight-color);
+  color: #000;
+  border-radius: 0.2em;
+  font-weight: 600;
+}
+
+/* Underline */
+.highlighter-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--highlight-color);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+}
+
+/* Strike */
+.highlighter-strike {
+  text-decoration: line-through;
+  text-decoration-color: var(--highlight-color);
+  text-decoration-thickness: 2px;
+}
+
+/* Box outline */
+.highlighter-box {
+  border: 2px solid var(--highlight-color);
+  border-radius: 0.25em;
+  padding: 0.2em 0.4em;
+}
+
+/* Optional animation */
+.highlighter-animate {
+  animation: highlightPop 0.5s ease-out;
+}
+
+@keyframes highlightPop {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Hover effect for interactive feel */
+.highlighter:hover {
+  transform: translateY(-1px);
+}
