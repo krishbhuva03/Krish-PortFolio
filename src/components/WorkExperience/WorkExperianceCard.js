@@ -1,29 +1,61 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import { CgWebsite } from "react-icons/cg";
-import { BsGithub } from "react-icons/bs";
+import { Terminal } from "../ui/Terminal";
+import { AnimatedSpan } from "../ui/AnimatedSpan";
 
-function WorkCards(props) {
+function WorkCards({ role, company, date, city, description, techStack }) {
   return (
-    <Card className="work-card-view">
-      <Card.Body>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-          <Card.Title>{props.title}</Card.Title>
-          <div style={{ textAlign: "right" }}>
-            <h5 style={{ fontSize: "1.1em", fontWeight: "bold", color: "white" }}>{props.date}</h5>
-            <p style={{ fontSize: "0.9em", color: "white" }}>{props.city}</p>
+    <Terminal>
+      {/* Top row: Role/Company (left) + Date/Address (right) */}
+      <AnimatedSpan className="terminal-top-row" delay={0}>
+        <div className="terminal-left">
+          <div className="terminal-role-line">
+            <span style={{ color: "#e2e8f0" }}>{`> ${role} @ `}</span>
+            <span className="purple">{company}</span>
           </div>
         </div>
-        <Card.Text style={{ textAlign: "left" }}>
-          {props.description}
-        </Card.Text>
-        {"\n"}
-        {"\n"}
+        <div className="terminal-right">
+          <div className="terminal-meta">📅 {date}</div>
+          <div className="terminal-meta">📍 {city}</div>
+        </div>
+      </AnimatedSpan>
 
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
-      </Card.Body>
-    </Card>
+      {/* Divider */}
+      <AnimatedSpan delay={400}>
+        <hr className="terminal-divider" />
+      </AnimatedSpan>
+
+      {/* Description bullets — centered */}
+      <div className="terminal-desc-center">
+        {description.map((item, index) => (
+          <AnimatedSpan
+            key={index}
+            className="terminal-desc-item"
+            delay={600 + index * 200}
+          >
+            <span className="check-mark">✔</span>
+            {item}
+          </AnimatedSpan>
+        ))}
+      </div>
+
+      {/* Tech Stack — left aligned */}
+      {techStack && techStack.length > 0 && (
+        <AnimatedSpan
+          className=""
+          delay={600 + description.length * 200 + 200}
+        >
+          <div className="terminal-tech-label">🛠 Tech Stack:</div>
+          <div className="terminal-tech-tags">
+            {techStack.map((tech, i) => (
+              <span key={i} className="tech-tag">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </AnimatedSpan>
+      )}
+    </Terminal>
   );
 }
+
 export default WorkCards;
