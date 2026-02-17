@@ -593,6 +593,16 @@ button:focus {
   line-height: 1.6 !important;
 }
 
+.tech-icon-label {
+  font-size: 0.28em;
+  color: rgba(200, 137, 230, 0.9);
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
 .quote-card-view {
   border: none !important;
   color: white !important;
@@ -800,36 +810,225 @@ button:focus {
 }
 
 .work-card {
-  padding: 60px 40px !important; /* extra padding for spacious look */
-  width: 100% !important; /* full width of container */
-  max-width: 1200px !important; /* wider max width */
-  margin: 0 auto !important; /* center it */
+  padding: 30px 15px !important;
+  width: 100% !important;
+  max-width: 1050px !important;
+  margin: 0 auto !important;
   height: auto !important;
-  font-size: 1.1rem !important; /* larger font for better readability */
-  line-height: 1.7 !important; /* more spacing between lines */
 }
 
-.work-card-view {
-  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
-  color: white !important;
-  background-color: transparent !important;
-  opacity: 0.9 !important;
-  transition: all 0.5s ease 0s !important;
-  height: 100% !important;
-  font-size: 1.05rem !important; /* slightly bigger inside content */
+/* --- Terminal Styles --- */
+
+.terminal-container {
+  background: #1a1b2e;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15), 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
 }
 
-.work-card-view:hover {
-  transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+.terminal-container:hover {
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.terminal-header {
+  background: #12132a;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-close {
+  background: #ff5f57;
+}
+
+.terminal-minimize {
+  background: #ffbd2e;
+}
+
+.terminal-maximize {
+  background: #28c840;
+}
+
+.terminal-body {
+  padding: 20px 24px;
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  min-height: 80px;
+}
+
+/* --- Terminal Content Layout --- */
+
+.terminal-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.terminal-left {
+  flex: 1;
+  text-align: left;
+}
+
+.terminal-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.terminal-role-line {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #e2e8f0;
+}
+
+.terminal-role-line .purple {
+  color: #c084fc;
+}
+
+.terminal-meta {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 2px;
+}
+
+.terminal-divider {
+  border: none;
+  border-top: 1px solid rgba(139, 92, 246, 0.2);
+  margin: 12px 0;
+}
+
+.terminal-desc-center {
+  text-align: left;
+}
+
+.terminal-desc-item {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  padding-left: 4px;
+  text-align: left;
+}
+
+.terminal-desc-item .check-mark {
+  color: #4ade80;
+  margin-right: 8px;
+}
+
+.terminal-tech-label {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-top: 14px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.terminal-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.tech-tag {
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: #c084fc;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tech-tag:hover {
+  background: rgba(139, 92, 246, 0.3);
+  border-color: rgba(139, 92, 246, 0.6);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
+}
+
+/* --- Animated Span & Typing Animation --- */
+
+.animated-span {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-span.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.typing-animation {
+  display: inline;
+}
+
+.typing-cursor {
+  display: inline-block;
+  animation: blink-cursor 1s step-end infinite;
+  color: #c084fc;
+  margin-left: 2px;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 767px) {
+  .work-card {
+    padding: 15px 8px !important;
+    max-width: 100% !important;
+  }
+  .terminal-body {
+    padding: 14px 16px;
+    font-size: 0.82rem;
+  }
+  .terminal-role-line {
+    font-size: 0.95rem;
+  }
+  .tech-tag {
+    font-size: 0.72rem;
+    padding: 2px 8px;
+  }
+  .terminal-top-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .terminal-right {
+    text-align: left;
+  }
 }
 
 /* Headings inside work section */
 .work-section h1,
 .work-section h2,
 .work-section h3 {
-  font-size: 2.4rem !important; /* bigger headings */
+  font-size: 2.4rem !important;
   font-weight: bold !important;
 }
 
@@ -837,12 +1036,6 @@ button:focus {
 .work-section p {
   font-size: 1.2rem !important;
   margin-bottom: 10px !important;
-}
-
-/* List items inside work section */
-.work-section li {
-  font-size: 1.1rem !important;
-  margin-bottom: 12px !important; /* more spacing between bullets */
 }
 
 
