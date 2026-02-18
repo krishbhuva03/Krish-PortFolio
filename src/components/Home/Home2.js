@@ -1,16 +1,48 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/file.svg";
 import Tilt from "react-parallax-tilt";
 import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+  IconBrandGithub,
+  IconBrandX,
+  IconBrandLinkedin,
+  IconBrandInstagram,
+} from "@tabler/icons-react";
 import { Highlighter } from "../ui/highlighter";
+import { FloatingDock } from "../ui/FloatingDock";
 
 function Home2() {
+  const socialLinks = [
+    {
+      title: "GitHub",
+      icon: (
+        <IconBrandGithub className="dock-icon-color" style={{ width: "100%", height: "100%" }} />
+      ),
+      href: "https://github.com/krishbhuva03",
+    },
+    {
+      title: "Twitter",
+      icon: (
+        <IconBrandX className="dock-icon-color" style={{ width: "100%", height: "100%" }} />
+      ),
+      href: "https://twitter.com/KrishBhuva3",
+    },
+    {
+      title: "LinkedIn",
+      icon: (
+        <IconBrandLinkedin className="dock-icon-color" style={{ width: "100%", height: "100%" }} />
+      ),
+      href: "https://www.linkedin.com/in/krish-bhuva/",
+    },
+    {
+      title: "Instagram",
+      icon: (
+        <IconBrandInstagram className="dock-icon-color" style={{ width: "100%", height: "100%" }} />
+      ),
+      href: "https://www.instagram.com/krish_bhuva__",
+    },
+  ];
+
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
@@ -65,7 +97,19 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img
+                src={myImg}
+                className="img-fluid"
+                alt="avatar"
+                style={{
+                  backgroundColor: "#c770f0",
+                  borderRadius: "50%",
+                  padding: "5px",
+                  boxShadow:
+                    "0 8px 20px rgba(199, 112, 240, 0.4), 0 15px 40px rgba(199, 112, 240, 0.2), inset 0 -4px 10px rgba(0, 0, 0, 0.15), inset 0 4px 10px rgba(255, 255, 255, 0.1)",
+                  border: "3px solid rgba(255, 255, 255, 0.15)",
+                }}
+              />
             </Tilt>
           </Col>
         </Row>
@@ -75,48 +119,9 @@ function Home2() {
             <p>
               Feel free to <span className="purple">connect </span>with me
             </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/krishbhuva03"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/KrishBhuva3"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/krish-bhuva/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/krish_bhuva__"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
-            </ul>
+            <div style={{ display: "flex", justifyContent: "center", paddingTop: "15px" }}>
+              <FloatingDock items={socialLinks} />
+            </div>
           </Col>
         </Row>
       </Container>
