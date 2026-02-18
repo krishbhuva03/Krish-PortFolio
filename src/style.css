@@ -1103,3 +1103,23 @@ button:focus {
   font-weight: 500 !important;
   padding-top: 10px !important;
 }
+
+/* --------- */
+/* Home Illustration Decorative Animations */
+/* --------- */
+@keyframes float1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+@keyframes float2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes float3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.9; }
+}
