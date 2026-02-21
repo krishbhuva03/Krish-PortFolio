@@ -1,6 +1,7 @@
 import React from "react";
 import { Terminal } from "../ui/Terminal";
 import { AnimatedSpan } from "../ui/AnimatedSpan";
+import { TypingAnimation } from "../ui/TypingAnimation";
 
 function WorkCards({ role, company, date, city, description, techStack }) {
   return (
@@ -27,14 +28,14 @@ function WorkCards({ role, company, date, city, description, techStack }) {
       {/* Description bullets — centered */}
       <div className="terminal-desc-center">
         {description.map((item, index) => (
-          <AnimatedSpan
-            key={index}
-            className="terminal-desc-item"
-            delay={600 + index * 200}
-          >
-            <span className="check-mark">✔</span>
-            {item}
-          </AnimatedSpan>
+          <div key={index} className="terminal-desc-item" style={{ display: "flex", gap: "8px" }}>
+            <AnimatedSpan delay={600 + index * 800}>
+              <span className="check-mark">✔</span>
+            </AnimatedSpan>
+            <TypingAnimation delay={800 + index * 800} speed={20} className="">
+              {item}
+            </TypingAnimation>
+          </div>
         ))}
       </div>
 
@@ -42,7 +43,7 @@ function WorkCards({ role, company, date, city, description, techStack }) {
       {techStack && techStack.length > 0 && (
         <AnimatedSpan
           className=""
-          delay={600 + description.length * 200 + 200}
+          delay={600 + description.length * 800 + 400}
         >
           <div className="terminal-tech-label">🛠 Tech Stack:</div>
           <div className="terminal-tech-tags">

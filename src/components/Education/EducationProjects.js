@@ -1,8 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import EducationCard from "./EducationCards";
+import EducationCard from "./EducationCard";
 import Particle from "../Particle";
-
 
 function EducationProjects() {
   return (
@@ -13,109 +12,88 @@ function EducationProjects() {
           Education <strong className="purple">Journey </strong>
         </h1>
         <p style={{ color: "white" }}>
-        Here is an overview of my educational journey and the milestones I've achieved along the way.
+          Here is an overview of my educational journey and the milestones I've achieved along the way.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="education-card">
             <EducationCard
               title="Bachelor of Technology"
-              description={
-                <>
-                  Parul University of - Vadodara
-                  <br />
-                  Computer Science Engineering | 2022-2025
-                  <br />
-                  CGPA: 7.66
-                </>
-              }
+              subtitle="Parul University - Vadodara"
+              date="2022-2025"
+              score="CGPA: 7.66"
+              index={1}
             />
           </Col>
 
           <Col md={4} className="education-card">
             <EducationCard
               title="Diploma"
-              description={
-                <>
-                  Goverment Polytechnics - Ahmadabad
-                  <br />
-                  Bio-Medical Engineering | 2019-2022
-                  <br />
-                  CGPA: 7.54
-                </>
-              }
+              subtitle="Government Polytechnics - Ahmadabad"
+              date="2019-2022"
+              score="CGPA: 7.54"
+              index={2}
             />
           </Col>
 
           <Col md={4} className="education-card">
             <EducationCard
               title="Secondary School Examination"
-              description={
-                <>
-                  Kendriya Vidyalaya Air Station - Samana
-                  <br />
-                  CBSE | 2019
-                  <br />
-                  Percentage: 62%
-                </>
-              }
+              subtitle="Kendriya Vidyalaya Air Station - Samana"
+              date="2019"
+              score="62%"
+              index={3}
             />
           </Col>
+        </Row>
 
-      <h1 className="education-heading">
+        <h1 className="education-heading">
           Courses And <strong className="purple">Certifications </strong>
-      </h1>
-      <p style={{ color: "white" }}>
-      Here is an overview of the courses and certifications I've completed throughout my B.Tech to enhance my technical skills and expertise.
-      </p>
+        </h1>
+        <p style={{ color: "white" }}>
+          Here is an overview of the courses and certifications I've completed throughout my B.Tech to enhance my technical skills and expertise.
+        </p>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="education-card">
+            <EducationCard
+              title="FUNDAMENTALS OF GENERATIVE AI"
+              subtitle="Cognizant"
+              date="01 Jan 2026 - 01 March 2026"
+              index={1}
+            />
+          </Col>
+          <Col md={4} className="education-card">
+            <EducationCard
+              title="JavaScript Programming Language In-depth With CSS"
+              subtitle="Coursera"
+              date="Oct 2024 - Nov 2024"
+              index={2}
+            />
+          </Col>
+          <Col md={4} className="education-card">
+            <EducationCard
+              title="Python Basics and Advanced Concepts in a Comprehensive Python Course"
+              subtitle="Udemy"
+              date="July 2024 - Sept 2024"
+              index={3}
+            />
+          </Col>
+          <Col md={4} className="education-card">
+            <EducationCard
+              title="Comprehensive JavaScript Course: From Beginner to Full Stack Pro"
+              subtitle="Udemy"
+              date="May 2024 - Jun 2024"
+              index={4}
+            />
+          </Col>
+          <Col md={4} className="education-card">
+            <EducationCard
+              title="The Complete 2024 Web Development Bootcamp"
+              subtitle="Udemy"
+              date="Nov 2023 - Apr 2024"
+              index={5}
+            />
+          </Col>
 
-          <Col md={4} className="education-card">
-            <EducationCard
-              title="Udemy"
-              description={
-                <>
-                  The Complete 2024 Web Development Bootcamp
-                  <br />
-                  Nov 2023 - Apr 2024
-                </>
-              }
-            />
-          </Col>
-          <Col md={4} className="education-card">
-            <EducationCard
-              title="Udemy"
-              description={
-                <>
-                  Comprehensive JavaScript Course: From Beginner to Full Stack Pro
-                  <br />
-                  May 2024 - Jun 2024
-                </>
-              }
-            />
-          </Col>
-          <Col md={4} className="education-card">
-            <EducationCard
-              title="Udemy"
-              description={
-                <>
-                  Python Basics and Advanced Concepts in a Comprehensive Python Course
-                  <br />
-                  July 2024 - Sept 2024
-                </>
-              }
-            />
-          </Col>
-          <Col md={4} className="education-card">
-            <EducationCard
-              title="Coursera"
-              description={
-                <>
-                  JavaScript Programming Language In-depth With CSS
-                  <br />
-                  Oct 2024 - Nov 2024
-                </>
-              }
-            />
-          </Col>
         </Row>
       </Container>
     </Container>
