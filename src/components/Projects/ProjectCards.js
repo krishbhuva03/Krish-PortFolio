@@ -6,35 +6,55 @@ import { BsGithub } from "react-icons/bs";
 
 function ProjectCards(props) {
   return (
-    <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
-      <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
-        </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
-        </Button>
-        {"\n"}
-        {"\n"}
+    <div className="project-card-view-distinct">
+      <div className="project-image-layer">
+        <img src={props.imgPath} alt="project-img" className="project-distinct-img" />
+      </div>
 
-        {/* If the component contains Demo link and if it's not a Blog then, it will render the below component  */}
+      <div className="project-content-layer">
+        <div>
+          <h3 className="project-distinct-title">{props.title}</h3>
+          {props.timeline && (
+            <p className="project-timeline">
+              {props.timeline}
+            </p>
+          )}
 
-        {!props.isBlog && props.demoLink && (
-          <Button
-            variant="primary"
-            href={props.demoLink}
-            target="_blank"
-            style={{ marginLeft: "10px" }}
-          >
-            <CgWebsite /> &nbsp;
-            {"Demo"}
+          <p className="project-distinct-description">
+            {props.description}
+          </p>
+
+          {props.technologies && props.technologies.length > 0 && (
+            <div className="project-technologies">
+              {props.technologies.map((tech, index) => (
+                <span key={index} className="tech-pill">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="project-links">
+          <Button variant="primary" href={props.ghLink} target="_blank" className="project-action-btn">
+            <BsGithub /> &nbsp;
+            {props.isBlog ? "Blog" : "GitHub"}
           </Button>
-        )}
-      </Card.Body>
-    </Card>
+
+          {!props.isBlog && props.demoLink && (
+            <Button
+              variant="primary"
+              href={props.demoLink}
+              target="_blank"
+              className="project-action-btn"
+            >
+              <CgWebsite /> &nbsp;
+              {"Live Website"}
+            </Button>
+          )}
+        </div>
+      </div>
+    </div>
   );
 }
 export default ProjectCards;
