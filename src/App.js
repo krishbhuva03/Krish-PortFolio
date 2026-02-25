@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import { SmoothCursor } from "./components/ui/smooth-cursor";
 import { ScrollProgress } from "./components/ui/scroll-progress";
+import ParticleBackground from "./components/ParticleBackground";
 import {
   BrowserRouter as Router,
   Route,
@@ -34,6 +35,7 @@ function App() {
 
   return (
     <Router>
+      <ParticleBackground />
       <SmoothCursor />
       <ScrollProgress />
       <Preloader load={load} />
