@@ -9,8 +9,6 @@
   align-items: flex-end;
   gap: 16px;
   border-radius: 16px;
-  background: rgba(30, 20, 50, 0.85);
-  backdrop-filter: blur(12px);
   padding: 0 16px 12px;
   border: 1px solid rgba(199, 112, 240, 0.2);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(199, 112, 240, 0.1);
@@ -51,7 +49,6 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(30, 20, 50, 0.9);
   border: 1px solid rgba(199, 112, 240, 0.3);
 }
 
@@ -67,7 +64,6 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(30, 20, 50, 0.9);
   border: 1px solid rgba(199, 112, 240, 0.3);
   color: #c770f0;
   cursor: pointer !important;
@@ -86,7 +82,6 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(40, 30, 60, 0.8);
   border: 1px solid rgba(199, 112, 240, 0.15);
   transition: border-color 0.3s ease;
 }
@@ -102,7 +97,6 @@
   left: 50%;
   width: max-content;
   border-radius: 6px;
-  background: rgba(30, 20, 50, 0.95);
   border: 1px solid rgba(199, 112, 240, 0.3);
   padding: 2px 8px;
   font-size: 0.75rem;

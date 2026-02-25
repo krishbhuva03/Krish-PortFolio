@@ -64,6 +64,11 @@ const DefaultCursorSVG = () => {
 export function SmoothCursor({
   cursor = <DefaultCursorSVG />,
 }) {
+  // Don't render on touch/mobile devices
+  const isTouchDevice =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
+
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [rotation, setRotation] = useState(0);
   const [scale, setScale] = useState(1);
@@ -163,6 +168,8 @@ export function SmoothCursor({
       document.body.style.cursor = "auto";
     };
   }, []);
+
+  if (isTouchDevice) return null;
 
   return (
     <div

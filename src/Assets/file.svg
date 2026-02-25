@@ -1,5 +1,12 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="100%" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve">
+<defs>
+  <radialGradient id="pinkBg" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#f9a8d4"/>
+    <stop offset="100%" stop-color="#ec4899"/>
+  </radialGradient>
+</defs>
+<circle cx="512" cy="512" r="512" fill="url(#pinkBg)"/>
 <path fill="none" opacity="1.000000" stroke="none" 
 	d="
 M1.000008,983.000000 
