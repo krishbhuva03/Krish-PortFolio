@@ -685,6 +685,26 @@ button:focus {
   white-space: nowrap;
 }
 
+/* PixelTransition tech icon/name */
+.pixel-tech-icon {
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  line-height: 1;
+}
+
+.pixel-tech-name {
+  font-size: 0.28em;
+  color: rgba(200, 137, 230, 0.95);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .quote-card-view {
   border: none !important;
   color: white !important;

@@ -8,6 +8,7 @@ import Education from "./components/Education/EducationProjects";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
+import Contact from "./components/Contact/Contact";
 import { SmoothCursor } from "./components/ui/smooth-cursor";
 import { ScrollProgress } from "./components/ui/scroll-progress";
 import ParticleBackground from "./components/ParticleBackground";
@@ -49,6 +50,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/education" element={<Education />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

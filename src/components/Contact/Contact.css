@@ -1,0 +1,300 @@
+/* --------- */
+/* Contact Section */
+/* --------- */
+
+.contact-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 60px !important;
+  color: white !important;
+}
+
+.contact-heading {
+  font-size: 2.4em !important;
+  font-weight: 700 !important;
+  padding-bottom: 10px !important;
+  color: white !important;
+}
+
+.contact-subheading {
+  font-size: 1.05em;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 50px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.contact-body {
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* --------- */
+/* Social Cards */
+/* --------- */
+
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-social-title {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 20px;
+}
+
+.social-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 22px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(199, 112, 240, 0.25);
+  color: white;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  cursor: none;
+}
+
+.social-card:hover {
+  background: rgba(199, 112, 240, 0.12);
+  border-color: rgba(199, 112, 240, 0.6);
+  box-shadow: 0 0 20px rgba(199, 112, 240, 0.3);
+  transform: translateY(-4px);
+  color: white;
+  text-decoration: none;
+}
+
+.social-card-icon {
+  font-size: 2em;
+  color: #c770f0;
+}
+
+.social-card-label {
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+
+/* Email block */
+.contact-email-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(199, 112, 240, 0.2);
+  width: 100%;
+}
+
+.contact-email-icon {
+  font-size: 1.4em;
+  color: #c770f0;
+  flex-shrink: 0;
+}
+
+.contact-email-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9em;
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.2s;
+}
+
+.contact-email-link:hover {
+  color: #c770f0;
+  text-decoration: underline;
+}
+
+/* --------- */
+/* Form Card */
+/* --------- */
+
+.contact-form-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(199, 112, 240, 0.25);
+  border-radius: 18px;
+  padding: 40px 36px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.contact-form-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 28px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group-custom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group-custom label {
+  font-size: 0.88em;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.form-group-custom input,
+.form-group-custom textarea {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(199, 112, 240, 0.2) !important;
+  border-radius: 10px !important;
+  color: white !important;
+  padding: 12px 16px !important;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.form-group-custom input::placeholder,
+.form-group-custom textarea::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.form-group-custom input:focus,
+.form-group-custom textarea:focus {
+  border-color: rgba(199, 112, 240, 0.7) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 0 0 3px rgba(199, 112, 240, 0.15) !important;
+}
+
+.form-group-custom input:disabled,
+.form-group-custom textarea:disabled {
+  opacity: 0.5;
+}
+
+/* --------- */
+/* Alerts */
+/* --------- */
+
+.contact-alert {
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 0.93em;
+  font-weight: 500;
+}
+
+.contact-alert-success {
+  background: rgba(72, 199, 142, 0.15);
+  border: 1px solid rgba(72, 199, 142, 0.4);
+  color: #6fcf97;
+}
+
+.contact-alert-error {
+  background: rgba(235, 87, 87, 0.15);
+  border: 1px solid rgba(235, 87, 87, 0.4);
+  color: #eb5757;
+}
+
+/* --------- */
+/* Submit Button */
+/* --------- */
+
+.contact-submit-btn {
+  padding: 14px 30px !important;
+  font-size: 1em !important;
+  font-weight: 600 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  background: linear-gradient(135deg, #8a2be2, #c770f0) !important;
+  color: white !important;
+  cursor: none !important;
+  transition: all 0.3s ease !important;
+  letter-spacing: 0.4px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  min-height: 50px !important;
+}
+
+.contact-submit-btn:hover:not(:disabled) {
+  box-shadow: 0 0 22px rgba(199, 112, 240, 0.55) !important;
+  transform: translateY(-2px) !important;
+  background: linear-gradient(135deg, #9b35f5, #d48af7) !important;
+}
+
+.contact-submit-btn:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}
+
+/* Spinner */
+.contact-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: contact-spin 0.7s linear infinite;
+}
+
+@keyframes contact-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------- */
+/* Responsive */
+/* --------- */
+
+@media (max-width: 768px) {
+  .contact-form-card {
+    padding: 28px 20px;
+  }
+
+  .contact-socials {
+    align-items: center;
+    width: 100%;
+  }
+
+  .social-cards-grid {
+    max-width: 320px;
+  }
+
+  .contact-heading {
+    font-size: 1.9em !important;
+  }
+
+  .contact-email-block {
+    max-width: 320px;
+  }
+}
