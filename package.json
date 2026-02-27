@@ -32,6 +32,7 @@
     "react-tsparticles": "^1.42.2",
     "simplex-noise": "^4.0.3",
     "three": "^0.136.0",
+    "three-globe": "^2.24.4",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.4"
   },
