@@ -36,7 +36,6 @@ function App() {
 
   return (
     <Router>
-      <ParticleBackground />
       <SmoothCursor />
       <ScrollProgress />
       <Preloader load={load} />

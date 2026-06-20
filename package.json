@@ -8,6 +8,7 @@
     "@react-three/drei": "^7.27.5",
     "@react-three/fiber": "^7.0.29",
     "@splinetool/react-spline": "^4.1.0",
+    "@splinetool/runtime": "^1.12.61",
     "@tabler/icons-react": "^3.36.1",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",

@@ -6,14 +6,14 @@
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 60px !important;
-  color: white !important;
+  color: #2b044d !important;
 }
 
 .contact-heading {
   font-size: 2.4em !important;
   font-weight: 700 !important;
   padding-bottom: 10px !important;
-  color: white !important;
+  color: #2b044d !important;
 }
 
 .contact-subheading {
@@ -65,7 +65,7 @@
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(199, 112, 240, 0.25);
-  color: white;
+  color: #2b044d;
   text-decoration: none;
   transition: all 0.35s ease;
   cursor: none;
@@ -76,7 +76,7 @@
   border-color: rgba(199, 112, 240, 0.6);
   box-shadow: 0 0 20px rgba(199, 112, 240, 0.3);
   transform: translateY(-4px);
-  color: white;
+  color: #2b044d;
   text-decoration: none;
 }
 
@@ -173,7 +173,7 @@
   background: rgba(255, 255, 255, 0.07) !important;
   border: 1px solid rgba(199, 112, 240, 0.2) !important;
   border-radius: 10px !important;
-  color: white !important;
+  color: #2b044d !important;
   padding: 12px 16px !important;
   font-size: 0.95em;
   transition: all 0.3s ease;
@@ -233,7 +233,7 @@
   border: none !important;
   border-radius: 10px !important;
   background: linear-gradient(135deg, #8a2be2, #c770f0) !important;
-  color: white !important;
+  color: #2b044d !important;
   cursor: none !important;
   transition: all 0.3s ease !important;
   letter-spacing: 0.4px !important;
@@ -261,7 +261,7 @@
   width: 20px;
   height: 20px;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  border-top-color: white;
+  border-top-color: #2b044d;
   border-radius: 50%;
   animation: contact-spin 0.7s linear infinite;
 }
