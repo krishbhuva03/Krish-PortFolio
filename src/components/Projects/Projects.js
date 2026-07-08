@@ -1,37 +1,187 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
-import ProjectCard from "./ProjectCards";
+import ProjectSpotlight from "./ProjectCards";
 import Particle from "../Particle";
-import word from "../../Assets/Projects/word-mindmaster Background Removed.png";
-import airbnb from "../../Assets/Projects/airbnb.png";
-import portfolio from "../../Assets/Projects/portfolio.jpeg";
+import word from "../../Assets/Projects/wordmaster.png";
+import roamlie from "../../Assets/Projects/roamlie.png";
+import portfolio from "../../Assets/Projects/portfolio.png";
+import cycleease from "../../Assets/Projects/cycleease.png";
+import csvImporter from "../../Assets/Projects/AI powered CSV Importer.png";
+import concurrencyBooking from "../../Assets/Projects/Concurrency Ticket booking.png";
+
+const projects = [
+  {
+    imgPath: concurrencyBooking,
+    isBlog: false,
+    title: "Concurrent Ticket Booking System",
+    timeline: "Jun 2024 – Jul 2024",
+    technologies: [
+      "Spring Boot",
+      "React",
+      "PostgreSQL",
+      "Redis",
+      "RabbitMQ",
+      "Docker",
+      "Java 21",
+      "Redisson",
+      "Spring Security",
+      "Flyway",
+      "Swagger/OpenAPI",
+      "Hibernate",
+    ],
+    description: [
+      "Engineered a production-grade train ticket booking platform handling high-concurrency ticket reservations safely.",
+      "Implemented dual-layer locking using Redisson Redis distributed locks and PostgreSQL FOR UPDATE SKIP LOCKED row locks.",
+      "Prevented transaction deadlocks by sorting seat IDs globally prior to lock acquisition.",
+      "Decoupled booking confirmation and waitlist promotions asynchronously via RabbitMQ queue pipelines.",
+      "Secured API endpoints with Spring Security and managed structured database schemas via Flyway migrations.",
+      "Designed and documented RESTful APIs with Swagger/OpenAPI, tested with integration test suites.",
+      "Built a React + Vite frontend to query real-time stop-traversals and coach availability schedules.",
+    ],
+    ghLink: "https://github.com/krishbhuva03/concurreny-booking",
+    demoLink: "https://booking-backend-production-fa08.up.railway.app/",
+  },
+  {
+    imgPath: csvImporter,
+    isBlog: false,
+    title: "AI-Powered CSV Importer",
+    timeline: "Apr 2024 – May 2024",
+    technologies: [
+      "Next.js 14",
+      "Tailwind CSS",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Groq API",
+      "Llama 3.3",
+      "Gemini AI",
+      "OpenAI API",
+      "Multer",
+      "CSV Parse",
+      "Docker",
+    ],
+    description: [
+      "Designed an AI-powered CSV import tool that maps uploaded data columns to GrowEasy CRM format using LLMs.",
+      "Integrated Groq API (Llama 3.3 70B) to intelligently parse, map, and standardize raw customer contacts into CRM schemas.",
+      "Built a 3-step dynamic frontend flow in Next.js, Tailwind CSS, and TypeScript for upload, interactive preview, and validation.",
+      "Developed a Node.js & Express backend in TypeScript to handle file parsing and pipeline data transformation.",
+      "Containerized the full-stack application using Docker and Docker Compose for simple local and production deployment.",
+    ],
+    ghLink: "https://github.com/krishbhuva03/ai-powered-csv-importer",
+    demoLink: "https://csv-importer-frontend.onrender.com",
+  },
+  {
+    imgPath: roamlie,
+    isBlog: false,
+    title: "Roamlie Vacation Rental Platform",
+    timeline: "Jan 2024 – Mar 2024",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "Socket.io",
+      "Redux Toolkit",
+      "Material UI (MUI)",
+      "Gemini AI",
+      "JWT",
+      "Axios",
+      "Framer Motion",
+    ],
+    description: [
+      "Built a full-stack vacation rental platform (Roamlie) featuring user profiles, property listings, and secure booking flows.",
+      "Integrated Gemini AI (via Google Generative AI SDK) to suggest customized travel itineraries and local recommendations.",
+      "Enabled real-time communications and chat notifications using Socket.io (WebSocket client-server synchronization).",
+      "Managed global application state and persisted user sessions using Redux Toolkit and Redux Persist.",
+      "Designed a sleek, responsive user interface with Material UI (MUI) components and Styled Components.",
+      "Developed a robust Express.js API with Mongoose schemas and secure JSON Web Token (JWT) user authentication.",
+    ],
+    ghLink: "https://github.com/krishbhuva03/airbnb",
+    demoLink: "https://roamlie.vercel.app/",
+  },
+  {
+    imgPath: cycleease,
+    isBlog: false,
+    title: "CycleEase",
+    timeline: "Sep 2023 – Nov 2023",
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Bootstrap",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Bcrypt",
+    ],
+    description: [
+      "Designed a period tracking web application that predicts upcoming cycles based on historical user data.",
+      "Built personalized wellness pages including exercise guides, diet plans, and health tips tailored to cycle moods.",
+      "Created an intuitive, responsive frontend with HTML5, CSS3, JavaScript, and Bootstrap for seamless navigation.",
+      "Developed a Node.js & Express.js backend with Mongoose schemas for secure user data and period log storage.",
+      "Implemented secure user registration and login using JSON Web Tokens (JWT) and Bcrypt hashing.",
+    ],
+    ghLink: "https://github.com/196170303023/CycleEase",
+    demoLink: "https://github.com/196170303023/CycleEase",
+  },
+  {
+    imgPath: portfolio,
+    isBlog: false,
+    title: "Personal | Portfolio",
+    timeline: "Jun 2023 – Aug 2023",
+    technologies: [
+      "React.js",
+      "Three.js",
+      "React Three Fiber",
+      "React Spline",
+      "GSAP",
+      "Framer Motion",
+      "Cobe Globe",
+      "tsParticles",
+      "Tilt.js",
+      "React Bootstrap",
+      "GitHub Calendar",
+      "Typewriter-Effect",
+    ],
+    description: [
+      "Built a modern, immersive developer portfolio using React.js, React Router, and React Bootstrap.",
+      "Integrated interactive 3D components with Three.js, React Three Fiber, and Spline 3D scene files.",
+      "Rendered a dynamic, responsive 3D WebGL globe utilizing Cobe and Canvas APIs.",
+      "Created premium motion choreography with Framer Motion, GreenSock (GSAP), and Tilt.js parallax effects.",
+      "Designed customized typewriter hero sequences, tsParticles backgrounds, and a live GitHub contribution calendar widget.",
+    ],
+    ghLink: "https://github.com/196170303023/KrishPortFolio",
+    demoLink: "https://visitkrish.vercel.app/",
+  },
+  {
+    imgPath: word,
+    isBlog: false,
+    title: "Word-Mastermind",
+    timeline: "Mar 2023 – May 2023",
+    technologies: [
+      "React.js",
+      "JavaScript (ES6)",
+      "CSS3 Animations",
+      "HTML5",
+      "LocalStorage",
+      "Vercel Deployment",
+    ],
+    description: [
+      "Built an interactive word-guessing game (similar to Wordle) using React.js state hooks and CSS animations.",
+      "Developed custom keyboard feedback mapping letter statuses (correct, misplaced, or absent) dynamically.",
+      "Implemented local storage persistence to save user game statistics and daily guess streaks.",
+      "Added custom CSS3 keyframe animations for flipping tiles and shake effects on invalid word submissions.",
+    ],
+    ghLink: "https://github.com/krishbhuva03/Word-Mastermind",
+    demoLink: "https://quinword.vercel.app/",
+  },
+];
 
 function Projects() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2, // Stagger effect to load cards sequentially
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12,
-      },
-    },
-  };
-
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -50,70 +200,11 @@ function Projects() {
         </motion.div>
 
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-            <Col md={10} className="project-card">
-              <motion.div variants={itemVariants} style={{ height: "100%" }}>
-                <ProjectCard
-                  imgPath={airbnb}
-                  isBlog={false}
-                  title="Air BnB Clone"
-                  timeline="Jan 2024 - Mar 2024"
-                  technologies={["Java", "Spring Boot", "Hibernate", "PostgreSQL", "JWT", "JSP", "Thymeleaf"]}
-                  description="I built an Airbnb clone web application where users can register, browse properties, filter by location, price, and amenities, and securely book rentals. Hosts can add and manage listings with details such as images, availability, and pricing. The project was developed using Java with Spring Boot and Hibernate for backend services and PostgreSQL for data storage, while authentication was managed using Spring Security with JWT. On the frontend, I used JSP/Thymeleaf for dynamic rendering and ensured a responsive UI. I also implemented real-time availability checks, validation layers, and RESTful APIs for seamless client–server communication. This project enhanced my expertise in Java-based full-stack development, focusing on API integration, database design, and building scalable, user-friendly applications."
-                  demoLink="https://air-bnnb-jet.vercel.app/"
-                />
-              </motion.div>
-            </Col>
-
-            <Col md={10} className="project-card">
-              <motion.div variants={itemVariants} style={{ height: "100%" }}>
-                <ProjectCard
-                  imgPath={portfolio}
-                  isBlog={false}
-                  title="CycleEase"
-                  timeline="Sep 2023 - Nov 2023"
-                  technologies={["React Native", "Node.js", "Express", "MongoDB"]}
-                  description="CycleEase is a user-friendly period tracking app designed to simplify menstrual health management for women. It predicts upcoming cycles based on past data, ensuring accurate tracking and preparation. The app offers tailored wellness features, including personalized diet plans and health tips, addressing users' mood and pain levels during cycles. CycleEase emphasizes accessibility with its intuitive interface, making it easy to use for all age groups. Additionally, it provides detailed analytics, helping users understand their unique cycle patterns and make informed health decisions. By blending technology with care, CycleEase supports holistic well-being, empowering women to manage their menstrual health effectively."
-                  ghLink="https://github.com/196170303023/CycleEase"
-                />
-              </motion.div>
-            </Col>
-
-            <Col md={10} className="project-card">
-              <motion.div variants={itemVariants} style={{ height: "100%" }}>
-                <ProjectCard
-                  imgPath={portfolio}
-                  isBlog={false}
-                  title="Personal | Portfolio"
-                  timeline="Jun 2023 - Aug 2023"
-                  technologies={["React", "JavaScript", "HTML", "CSS"]}
-                  description="I've developed a modern, responsive portfolio using React, JavaScript, HTML, and CSS to serve as a comprehensive platform for showcasing my professional journey. This portfolio highlights key aspects of my career, including my academic background, technical skills, major achievements, and the diverse projects I've worked on. Each section has been carefully designed to provide detailed insights, allowing visitors to understand my expertise and professional growth.
-
-                  The portfolio features an intuitive, user-friendly interface with a clean design and smooth navigation, ensuring a seamless browsing experience. Visitors can explore my skills, view project details, and gain a clear understanding of how I approach problem-solving and development."
-                  ghLink="https://github.com/196170303023/KrishPortFolio"
-                />
-              </motion.div>
-            </Col>
-
-            <Col md={10} className="project-card">
-              <motion.div variants={itemVariants} style={{ height: "100%" }}>
-                <ProjectCard
-                  imgPath={word}
-                  isBlog={false}
-                  title="Word-Mastermind"
-                  timeline="Mar 2023 - May 2023"
-                  technologies={["React", "JavaScript", "CSS"]}
-                  description="Word Mastermind is an engaging word-guessing game that challenges players to deduce a hidden target word. Players enter guesses, and the game provides immediate feedback for each letter: letters in the correct position are marked green, while correctly guessed but misplaced letters are highlighted in yellow. Unmatched letters remain unmarked, helping players refine their strategy as they progress. All guesses must be valid words, adding an element of linguistic skill and vocabulary knowledge. To enhance gameplay further, the on-screen keyboard dynamically updates, visually indicating letter statuses—present (green), absent (dark gray), or unknown (light gray), ensuring an interactive and intuitive experience."
-                  demoLink="https://quinword.vercel.app/"
-                />
-              </motion.div>
-            </Col>
-          </Row>
+          <ProjectSpotlight projects={projects} />
         </motion.div>
       </Container>
     </Container>
