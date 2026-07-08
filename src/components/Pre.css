@@ -49,6 +49,17 @@
   perspective: 1000px;
 }
 
+.name-reveal-glitch {
+  opacity: 0;
+  transform: translateY(30px) rotateX(-15deg);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.name-reveal-glitch.visible {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+
 .letter {
   display: inline-block;
   font-size: 4rem;

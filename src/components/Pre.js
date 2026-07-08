@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Pre.css";
 import IconCloud from "./ui/IconCloud";
+import GlitchText from "./ui/GlitchText";
 
 const techIcons = [
   { slug: "typescript", color: "3178C6" },
@@ -66,21 +67,10 @@ function Pre({ load }) {
     >
       {/* Upper section - Name + Tagline */}
       <div className="preloader-content preloader-upper">
-        <div className="name-reveal">
-          {name.split("").map((letter, index) => (
-            <span
-              key={index}
-              className={`letter ${animationPhase !== "initial" ? "visible" : ""} ${
-                animationPhase === "glowing" ? "glow" : ""
-              }`}
-              style={{
-                animationDelay: `${index * 0.08}s`,
-                transitionDelay: `${index * 0.08}s`,
-              }}
-            >
-              {letter === " " ? "\u00A0" : letter}
-            </span>
-          ))}
+        <div className={`name-reveal name-reveal-glitch ${animationPhase !== "initial" ? "visible" : ""}`}>
+          <GlitchText speed={0.8} enableShadows={true} enableOnHover={false}>
+            {name}
+          </GlitchText>
         </div>
         <div
           className={`tagline ${animationPhase === "glowing" ? "visible" : ""}`}
