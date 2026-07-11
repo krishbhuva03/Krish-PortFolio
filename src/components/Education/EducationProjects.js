@@ -55,6 +55,22 @@ function EducationProjects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="education-card">
             <EducationCard
+              title="Claude Code In Action"
+              subtitle="Anthropic"
+              date="01 Feb 2026 - 01 June 2026"
+              index={1}
+            />
+          </Col>
+          <Col md={4} className="education-card">
+            <EducationCard
+              title="Java Development Essentials"
+              subtitle="Cognizant"
+              date="01 Feb 2026 - 01 June 2026"
+              index={1}
+            />
+          </Col>
+          <Col md={4} className="education-card">
+            <EducationCard
               title="FUNDAMENTALS OF GENERATIVE AI"
               subtitle="Cognizant"
               date="01 Jan 2026 - 01 March 2026"
