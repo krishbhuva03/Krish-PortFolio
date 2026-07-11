@@ -55,7 +55,7 @@ function EducationProjects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="education-card">
             <EducationCard
-              title="Claude Code In Action"
+              title="Claude Code In Action : MCP Server"
               subtitle="Anthropic"
               date="01 Feb 2026 - 01 June 2026"
               index={1}
