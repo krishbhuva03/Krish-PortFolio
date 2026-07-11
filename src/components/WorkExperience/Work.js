@@ -19,7 +19,7 @@ function Work() {
           {/* Cognizant */}
           <Col md={8} style={{ maxWidth: "1050px" }} className="work-card">
             <WorkCards
-              role="Programmer Analyst Trainee"
+              role="Programmer Analyst"
               company="Cognizant"
               date="05 Feb 2026 - Present"
               city="Siruseri, Chennai, Tamil Nadu"
