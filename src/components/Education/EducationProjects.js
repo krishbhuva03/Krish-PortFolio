@@ -57,7 +57,7 @@ function EducationProjects() {
             <EducationCard
               title="Claude Code In Action : MCP Server"
               subtitle="Anthropic"
-              date="01 Feb 2026 - 01 June 2026"
+              date="01 March 2026 - 01 July 2026"
               index={1}
             />
           </Col>
