@@ -455,21 +455,9 @@ function Contact() {
         {/* Body */}
         <Row className="justify-content-center contact-body align-items-center">
           {/* Left Side — 3D Globe with arcs */}
-          <Col md={6} className="contact-globe-col position-relative">
-            <div className="w-100 position-relative" style={{ height: "40rem" }}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                style={{ position: "absolute", zIndex: 10, top: "2rem", left: "0", right: "0", textAlign: "center" }}
-              >
-              </motion.div>
-              <div 
-                className="position-absolute w-100 z-10" 
-                style={{ height: "80%", bottom: "10%" }}
-              >
-                <World data={sampleArcs} globeConfig={globeConfig} />
-              </div>
+          <Col md={6} className="contact-globe-col position-relative d-flex justify-content-center">
+            <div style={{ width: "100%", maxWidth: "480px" }}>
+              <World data={sampleArcs} globeConfig={globeConfig} />
             </div>
           </Col>
 
