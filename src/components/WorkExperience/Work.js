@@ -24,7 +24,12 @@ function Work() {
               date="05 Feb 2026 - Present"
               city="Siruseri, Chennai, Tamil Nadu"
               description={[
-                "Currently working as a Programmer Analyst Trainee.",
+                "Worked in the cybersecurity domain with a focus on Identity and Access Management (IAM) using SailPoint IdentityIQ (IIQ).",
+                "Developed and customized Java BeanShell scripts within SailPoint IIQ to implement business logic, workflows, and identity governance rules.",
+                "Configured and maintained SailPoint IIQ components such as application onboarding, provisioning, certifications, and access reviews.",
+                "Utilized Core Java and JDBC to interact with backend databases, ensuring accurate data retrieval and manipulation for identity-related processes.",
+                "Collaborated within a Scrum Agile team to deliver project requirements and maintain code quality through regular stand-ups, sprint planning, and reviews.",
+                "Gained hands-on training in Core Java, JDBC, Collection Framework, Python, and Data Structures & Algorithms (DSA) to build a strong foundation in backend development and problem-solving.",
               ]}
               techStack={[]}
             />

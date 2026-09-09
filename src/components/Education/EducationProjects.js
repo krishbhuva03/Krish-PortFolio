@@ -55,10 +55,18 @@ function EducationProjects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="education-card">
             <EducationCard
-              title="Introduction to Agentic AI"
-              subtitle="Cognizant"
-              date="April 2026 - June 2026"
+              title="Claude Code In Action : MCP Server"
+              subtitle="Anthropic"
+              date="01 March 2026 - 01 July 2026"
               index={1}
+            />
+          </Col>
+          <Col md={4} className="education-card">
+            <EducationCard
+              title="ChatGPT Solutions Practitioner"
+              subtitle="OpenAI"
+              date="Aug 2026 - Sept 2026"
+              index={2}
             />
           </Col>
           <Col md={4} className="education-card">
@@ -66,15 +74,15 @@ function EducationProjects() {
               title="Fundamental of Modern AI"
               subtitle="Cognizant"
               date="June 2026 - July 2026"
-              index={2}
+              index={3}
             />
           </Col>
           <Col md={4} className="education-card">
             <EducationCard
-              title="Claude Code In Action : MCP Server"
-              subtitle="Anthropic"
-              date="01 March 2026 - 01 July 2026"
-              index={3}
+              title="Introduction to Agentic AI"
+              subtitle="Cognizant"
+              date="April 2026 - June 2026"
+              index={4}
             />
           </Col>
           <Col md={4} className="education-card">
@@ -82,7 +90,7 @@ function EducationProjects() {
               title="Java Development Essentials"
               subtitle="Cognizant"
               date="01 Feb 2026 - 01 June 2026"
-              index={1}
+              index={5}
             />
           </Col>
           <Col md={4} className="education-card">
@@ -90,7 +98,7 @@ function EducationProjects() {
               title="FUNDAMENTALS OF GENERATIVE AI"
               subtitle="Cognizant"
               date="01 Jan 2026 - 01 March 2026"
-              index={1}
+              index={6}
             />
           </Col>
           <Col md={4} className="education-card">
@@ -98,7 +106,7 @@ function EducationProjects() {
               title="JavaScript Programming Language In-depth With CSS"
               subtitle="Coursera"
               date="Oct 2024 - Nov 2024"
-              index={2}
+              index={7}
             />
           </Col>
           <Col md={4} className="education-card">
@@ -106,7 +114,7 @@ function EducationProjects() {
               title="Python Basics and Advanced Concepts in a Comprehensive Python Course"
               subtitle="Udemy"
               date="July 2024 - Sept 2024"
-              index={3}
+              index={8}
             />
           </Col>
           <Col md={4} className="education-card">
@@ -114,7 +122,7 @@ function EducationProjects() {
               title="Comprehensive JavaScript Course: From Beginner to Full Stack Pro"
               subtitle="Udemy"
               date="May 2024 - Jun 2024"
-              index={4}
+              index={9}
             />
           </Col>
           <Col md={4} className="education-card">
@@ -122,9 +130,10 @@ function EducationProjects() {
               title="The Complete 2024 Web Development Bootcamp"
               subtitle="Udemy"
               date="Nov 2023 - Apr 2024"
-              index={5}
+              index={10}
             />
           </Col>
+          
 
         </Row>
       </Container>

@@ -124,93 +124,115 @@ function EducationCard({ title, subtitle, date, score, isCourse = false, index }
         </div>
       </div>
 
-      {/* Date & Content Section - Aligning it next to the line */}
-      <div style={{ position: "relative" }}>
-        {/* Connecting Vertical Line from Orb */}
-        <motion.div 
-          initial={{ height: 0 }}
-          whileInView={{ height: "calc(100% - 1rem)" }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-          style={{
-            position: "absolute",
-            left: "1.45rem", /* Center of the 3rem orb */
-            top: "-1rem",    /* Reach up towards the orb */
-            width: "3px",
-            background: `linear-gradient(to bottom, ${lightGlow}80, ${glowColor}20, transparent)`,
-            borderRadius: "2px",
-            boxShadow: `0 0 8px ${glowColor}60`
-          }} 
-        />
-
+      {/* Glowing Divider with Center Diamond */}
+      <motion.div
+        initial={{ opacity: 0, scaleX: 0 }}
+        whileInView={{ opacity: 1, scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "0.5rem",
+          margin: "0.25rem 0"
+        }}
+      >
+        {/* Left line */}
+        <div style={{
+          flex: 1,
+          height: "1px",
+          background: `linear-gradient(to right, transparent, ${glowColor}80)`,
+          boxShadow: `0 0 6px ${glowColor}40`
+        }} />
+        {/* Center rotating diamond */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
           style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "1.2rem",
-            paddingLeft: "4.25rem", /* Content aligns with text, missing the orb and line */
-            paddingTop: "0.5rem"
+            width: "10px",
+            height: "10px",
+            background: `linear-gradient(135deg, ${lightGlow}, ${glowColor})`,
+            boxShadow: `0 0 10px ${glowColor}, 0 0 4px ${lightGlow}`,
+            transform: "rotate(45deg)",
+            flexShrink: 0,
+            borderRadius: "2px"
           }}
-        >
-          {/* Date Badge */}
-          <div style={{
-            display: "inline-block",
-            fontSize: "0.85rem",
-            color: "#aaa",
-            fontFamily: "monospace",
-            backgroundColor: "rgba(0,0,0,0.4)",
-            padding: "0.35rem 0.6rem",
-            borderRadius: "6px",
-            border: "1px solid rgba(255,255,255,0.15)",
-            alignSelf: "flex-start",
-            letterSpacing: "1px",
-            boxShadow: "inset 0 1px 3px rgba(0,0,0,0.5)"
-          }}>
-            {date}
-          </div>
+        />
+        {/* Right line */}
+        <div style={{
+          flex: 1,
+          height: "1px",
+          background: `linear-gradient(to left, transparent, ${glowColor}80)`,
+          boxShadow: `0 0 6px ${glowColor}40`
+        }} />
+      </motion.div>
 
-          {/* Score Badge */}
-          {score && (
-            <motion.div
-              whileHover={{ scale: 1.05, x: 5 }}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.75rem",
-                backgroundColor: `rgba(199, 112, 240, 0.15)`,
-                border: `1px solid ${glowColor}50`,
-                padding: "0.6rem 1.25rem",
-                borderRadius: "8px",
-                alignSelf: "flex-start",
-                boxShadow: `0 0 15px ${glowColor}20, inset 0 0 10px ${glowColor}10`,
-                backdropFilter: "blur(8px)"
-              }}
-            >
-              <span style={{ 
-                fontSize: "0.85rem", 
-                color: "#ccc", 
-                textTransform: "uppercase", 
-                letterSpacing: "1px",
-                fontWeight: "600"
-              }}>
-                {isCourse ? "Platform" : "Grade"}
-              </span>
-              <span style={{ 
-                fontWeight: "900", 
-                color: "white", 
-                textShadow: `0 0 12px ${lightGlow}, 0 0 4px white`,
-                fontSize: "1.1rem"
-              }}>
-                {score}
-              </span>
-            </motion.div>
-          )}
-        </motion.div>
-      </div>
+      {/* Date & Content Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5 }}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "1.2rem",
+        }}
+      >
+        {/* Date Badge */}
+        <div style={{
+          display: "inline-block",
+          fontSize: "0.85rem",
+          color: "#aaa",
+          fontFamily: "monospace",
+          backgroundColor: "rgba(0,0,0,0.4)",
+          padding: "0.35rem 0.6rem",
+          borderRadius: "6px",
+          border: "1px solid rgba(255,255,255,0.15)",
+          alignSelf: "flex-start",
+          letterSpacing: "1px",
+          boxShadow: "inset 0 1px 3px rgba(0,0,0,0.5)"
+        }}>
+          {date}
+        </div>
+
+        {/* Score Badge */}
+        {score && (
+          <motion.div
+            whileHover={{ scale: 1.05, x: 5 }}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.75rem",
+              backgroundColor: `rgba(199, 112, 240, 0.15)`,
+              border: `1px solid ${glowColor}50`,
+              padding: "0.6rem 1.25rem",
+              borderRadius: "8px",
+              alignSelf: "flex-start",
+              boxShadow: `0 0 15px ${glowColor}20, inset 0 0 10px ${glowColor}10`,
+              backdropFilter: "blur(8px)"
+            }}
+          >
+            <span style={{ 
+              fontSize: "0.85rem", 
+              color: "#ccc", 
+              textTransform: "uppercase", 
+              letterSpacing: "1px",
+              fontWeight: "600"
+            }}>
+              {isCourse ? "Platform" : "Grade"}
+            </span>
+            <span style={{ 
+              fontWeight: "900", 
+              color: "white", 
+              textShadow: `0 0 12px ${lightGlow}, 0 0 4px white`,
+              fontSize: "1.1rem"
+            }}>
+              {score}
+            </span>
+          </motion.div>
+        )}
+      </motion.div>
     </motion.div>
   );
 }

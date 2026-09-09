@@ -21,3 +21,4 @@ function EducationCards(props) {
   );
 }
 export default EducationCards;
+
