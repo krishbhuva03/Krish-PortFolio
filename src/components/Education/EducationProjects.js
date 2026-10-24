@@ -38,7 +38,7 @@ function EducationProjects() {
           <Col md={4} className="education-card">
             <EducationCard
               title="Secondary School Examination"
-              subtitle="Kendriya Vidyalaya Air Station - Samana"
+              subtitle="Kendriya Vidyalaya Air Force Station - Samana"
               date="2019"
               score="62%"
               index={3}
