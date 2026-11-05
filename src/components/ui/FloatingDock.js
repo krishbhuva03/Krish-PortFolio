@@ -4,7 +4,7 @@
  * Adapted from Aceternity UI for CRA/JS/framer-motion v6.
  */
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import {
   AnimatePresence,
@@ -26,8 +26,25 @@ export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
 
 const FloatingDockMobile = ({ items, className }) => {
   const [open, setOpen] = useState(false);
+  const dockRef = useRef(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const handleClickOutside = (e) => {
+      if (dockRef.current && !dockRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [open]);
+
   return (
-    <div className={`floating-dock-mobile ${className || ""}`}>
+    <div ref={dockRef} className={`floating-dock-mobile ${className || ""}`}>
       <AnimatePresence>
         {open && (
           <motion.div
@@ -50,6 +67,8 @@ const FloatingDockMobile = ({ items, className }) => {
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
+                  title={item.title}
+                  aria-label={item.title}
                   className="dock-link floating-dock-mobile-icon-btn"
                 >
                   <div className="dock-icon-inner-small">{item.icon}</div>
@@ -61,7 +80,10 @@ const FloatingDockMobile = ({ items, className }) => {
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="floating-dock-mobile-toggle"
+        className={`floating-dock-mobile-toggle ${open ? "open" : ""}`}
+        type="button"
+        aria-label="Toggle navigation dock"
+        aria-expanded={open}
       >
         <IconLayoutNavbarCollapse />
       </button>
