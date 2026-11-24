@@ -4,8 +4,11 @@ import { AnimatedSpan } from "../ui/AnimatedSpan";
 import { TypingAnimation } from "../ui/TypingAnimation";
 
 function WorkCards({ role, company, date, city, description, techStack }) {
+  // Copy only the description bullets
+  const copyText = description.map((d) => `• ${d}`).join("\n");
+
   return (
-    <Terminal>
+    <Terminal copyText={copyText}>
       {/* Top row: Role/Company (left) + Date/Address (right) */}
       <AnimatedSpan className="terminal-top-row" delay={0}>
         <div className="terminal-left">
